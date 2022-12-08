@@ -11,11 +11,11 @@ public :
 	{
 		if (this->status != "Incomplete")
 		{
-			if (size(Line) != 84)
+			if (size(Line) != 83)
 				this->status = "Error";
 			else
 			{
-				if (Line.substr(37, 39) == "...")
+				if (Line.substr(37, 3) == "...")
 				{
 					this->status = "Incomplete";
 				}
@@ -24,21 +24,24 @@ public :
 					this->status = "Done";
 				}
 			}
+			if (this->status != "Error")
+			{
+				string bookAuthor = Line.substr(40, 29);
+				string bookID = Line.substr(70, 12);
+				string BookName = Line.substr(0, 39);
+
+				this->lastRead.setBookAuthor(bookAuthor);
+				this->lastRead.setBookID(bookID);
+				this->lastRead.setBookName(BookName);
+			}
 		}
 		else
 		{
-			string realName = this->lastRead.getBookName().substr(0,36)	 + Line; 
+			string realName = this->lastRead.getBookName().substr(0,37)	 + Line; 
 			this->lastRead.setBookName(realName);
+			this->status = "Done";
 		}
-		if (this->status != "Error")
-		{
-			string BookName = Line.substr(0, 39);
-			string bookAuthor = Line.substr(40, 69);
-			string bookID = Line.substr(70, 83);
-			this->lastRead.setBookAuthor(bookAuthor);
-			this->lastRead.setBookID(bookID);
-			this->lastRead.setBookName(BookName);
-		}
+		
 		return this->status;
 	}
 

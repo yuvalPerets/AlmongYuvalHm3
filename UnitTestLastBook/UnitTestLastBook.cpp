@@ -9,8 +9,9 @@ namespace UnitTestLastBook
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(Test_last_book_doesnt_exist)
 		{
+
 		}
 	};
 }

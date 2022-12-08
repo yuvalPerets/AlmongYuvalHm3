@@ -51,6 +51,7 @@ namespace UnitTest1
 		TEST_METHOD(Test_zero_input)
 		{
 			std::string excpectedResult = "Error";
+			std::string trytingtopull = "pullmeplease";
 			PRNParser* a = new PRNParser();
 			string result = a->ParseLine("");
 			Assert::AreEqual(excpectedResult, result);

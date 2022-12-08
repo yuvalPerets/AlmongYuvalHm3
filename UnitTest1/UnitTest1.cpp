@@ -33,7 +33,6 @@ namespace UnitTest1
 			PRNParser* a = new PRNParser();
 		    std::string exampleForIncomplete = "Uncle Tom's Cabin; or, Life Among the...Beecher Stowe,Harriet         9781840224023";
 			string result = a->ParseLine(exampleForIncomplete);
-
 			Assert::AreEqual(excpectedResult2, result);
 		}
 		TEST_METHOD(Test_Incomplete_input_part2)
@@ -44,7 +43,6 @@ namespace UnitTest1
 			a->ParseLine(exampleForIncomplete);
 			std::string exampleForDone = " Lonely  ";
 			string result = a->ParseLine(exampleForDone);
-
 			Assert::AreEqual(excpectedResult3, result);
 		}
 		TEST_METHOD(Test_zero_input)

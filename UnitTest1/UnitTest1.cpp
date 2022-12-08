@@ -23,16 +23,15 @@ namespace UnitTest1
 		{
 			std::string excpectedResult1 = "Done";
 			PRNParser* a = new PRNParser();
-		std::string example = "Little Women                            Alcott,Louisa May             9781402714580";
+		    std::string example = "Little Women                            Alcott,Louisa May             9781402714580";
 			string result = a->ParseLine(example);
-			
-				Assert::AreEqual(excpectedResult1, result);
+		    Assert::AreEqual(excpectedResult1, result);
 		}
 		TEST_METHOD(Test_Incomplete_input)
 		{
 			std::string excpectedResult2 = "Incomplete";
 			PRNParser* a = new PRNParser();
-		std::string exampleForIncomplete = "Uncle Tom's Cabin; or, Life Among the...Beecher Stowe,Harriet         9781840224023";
+		    std::string exampleForIncomplete = "Uncle Tom's Cabin; or, Life Among the...Beecher Stowe,Harriet         9781840224023";
 			string result = a->ParseLine(exampleForIncomplete);
 
 			Assert::AreEqual(excpectedResult2, result);
@@ -41,7 +40,7 @@ namespace UnitTest1
 		{
 			std::string excpectedResult3 = "Done";
 			PRNParser* a = new PRNParser();
-		std::string exampleForIncomplete = "Uncle Tom's Cabin; or, Life Among the...Beecher Stowe,Harriet         9781840224023";
+    		std::string exampleForIncomplete = "Uncle Tom's Cabin; or, Life Among the...Beecher Stowe,Harriet         9781840224023";
 			a->ParseLine(exampleForIncomplete);
 			std::string exampleForDone = " Lonely  ";
 			string result = a->ParseLine(exampleForDone);

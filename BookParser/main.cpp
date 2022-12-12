@@ -7,12 +7,9 @@ using namespace std;
 void main() 
 	{
 	ifstream myDatabase("ISBNs.prn", ios::in);
-	PRNParser* p = new PRNParser() ;
-	char  currentLine [100];
-
-	myDatabase.getline(currentLine, '\n');
+	
 
 
-	cout << currentLine  ;
+
 	}
 	

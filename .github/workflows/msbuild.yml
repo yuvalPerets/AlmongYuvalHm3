@@ -9,8 +9,8 @@ on:
 env:
   # Path to the solution file relative to the root of the project.
   SOLUTION_FILE_PATH: BookParser\BookParser.vcxproj
-  TEST1_FILE_PATH: UnitTest1\UnitTest1.vcxproj
-  TEST2_FILE_PATH: Unit_test_for_last_read\Unit_test_for_last_read.vcxproj
+  Test_Project_Path: UnitTest1\UnitTest1.vcxproj
+  Test_Project_Path2: Unit_test_for_last_read\Unit_test_for_last_read.vcxproj
 
 
 

@@ -26,9 +26,9 @@ public :
 			}
 			if (this->status != "Error")
 			{
-				string bookAuthor = Line.substr(40, 29);
-				string bookID = Line.substr(70, 12);
-				string BookName = Line.substr(0, 39);
+				string bookAuthor = Line.substr(40, 30);
+				string bookID = Line.substr(70, 13);
+				string BookName = Line.substr(0, 40);
 
 				this->lastRead.setBookAuthor(bookAuthor);
 				this->lastRead.setBookID(bookID);
@@ -45,7 +45,15 @@ public :
 		return this->status;
 	}
 
-	string getlastbook() { return this->lastRead.getBook() + "hey"; }
+	Book getlastbook() { 
+		if (this->status == "Incomplete")
+		{
+			Book* a = new Book();
+			return *a;
+		}
+		else
+			return this->lastRead;
+	}
 	
 	
 };

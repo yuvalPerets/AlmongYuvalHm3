@@ -44,8 +44,7 @@ jobs:
       
     - name: Execute unit test1
       run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.Test_Project_Path}}
-    - name: Execute unit test2
-      run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{ Test_Project_Path2}}
+   
          
   
       

@@ -18,7 +18,7 @@ public :
 				if (Line.substr(37, 3) == "...")
 				{
 					this->status = "Incomplete";
-				}
+				} 
 				else
 				{
 					this->status = "Done";
@@ -45,7 +45,7 @@ public :
 		return this->status;
 	}
 
-	Book getlastbook() { return this->lastRead; }
+	string getlastbook() { return this->lastRead.getBook() + "hey"; }
 	
 	
 };

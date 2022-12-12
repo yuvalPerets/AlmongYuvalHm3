@@ -31,5 +31,10 @@ using namespace std;
 	  void setBookName(string bookName) { this->bookName = bookName; }
 	  void setBookAuthor(string Author) { this->atuhor = Author; }
 	  void setBookID(string ID) { this->ID = ID; }
+	  bool operator==(Book& another)
+	  {
+		  return ((this->atuhor == another.atuhor) && (this->bookName == another.bookName) && (this->ID == another.ID));
+	  }
+
 
 };

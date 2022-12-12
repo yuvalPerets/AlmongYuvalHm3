@@ -43,7 +43,7 @@ jobs:
       run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
       
     - name: Execute unit test1
-      run: UnitTest1
+      working-directory: ${{env.GITHUB_WORKSPACE}}
     - name: Execute unit test2
       run: Unit_test_for_last_read
          
